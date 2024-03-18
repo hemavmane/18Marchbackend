@@ -27,4 +27,6 @@ router.post(
 );
 
 router.get("/getclient", ClientController.getclient);
+router.post("/trashclient/:id", ClientController.deleteclient);
 module.exports = router;
+

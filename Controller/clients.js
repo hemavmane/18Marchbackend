@@ -39,3 +39,18 @@ exports.AddClient = async (req, res) => {
       return res.status(500).json({ err: "Internal Error" });
     }
   };
+
+  
+
+  exports.deleteclient = async (req,res) =>{
+    let id = req.params.id
+    try {
+        let data = await ClientModal.findByIdAndDelete({_id:id})
+        if (data) {
+            return res.status(200).json({ data: "Deleted Succesfully" });
+          }
+    } catch (error) {
+        console.error(err);
+  return res.status(500).json({ err: "Internal Error" });
+    }
+}
