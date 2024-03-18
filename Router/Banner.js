@@ -27,5 +27,5 @@ router.post(
 );
 
 router.get("/getbanner", ProductController.getBanner);
-router.post("/trash", ProductController.deletebaner);
+router.post("/trash/:id", ProductController.deletebaner);
 module.exports = router;
