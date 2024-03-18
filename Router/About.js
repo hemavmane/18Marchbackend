@@ -27,4 +27,5 @@ router.post(
 );
 
 router.get("/getAbout", AboutController.getAbout);
+router.post("/trashabout/:id", AboutController.deleteAbout);
 module.exports = router;
